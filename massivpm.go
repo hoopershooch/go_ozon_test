@@ -37,7 +37,7 @@ func findUnsortedSubarray(array []uint) (left uint, right uint) {
 
 	if array[0] > array[arrLen-1] {
 		for {
-			if (i > arrLen) || (j == 0) {
+			if i > j {
 				break
 			}
 			if !startFound {
@@ -65,7 +65,7 @@ func findUnsortedSubarray(array []uint) (left uint, right uint) {
 		}
 	} else if array[0] < array[arrLen-1] {
 		for {
-			if (i > arrLen) || (j == 0) {
+			if i > j {
 				break
 			}
 			if !startFound {
@@ -93,7 +93,7 @@ func findUnsortedSubarray(array []uint) (left uint, right uint) {
 		}
 	} else {
 		for {
-			if (i > arrLen) || (j == 0) {
+			if i > j {
 				break
 			}
 
